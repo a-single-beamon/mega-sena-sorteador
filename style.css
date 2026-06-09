@@ -1,4 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/futura-std-4');
+@import url('https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap');
 
 :root {
   --bg: #0d3b52;
@@ -144,12 +145,14 @@ body {
   background: #fff;
   color: var(--bg);
   flex-shrink: 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+  font-family: 'Konkhmer Sleokchher', sans-serif;
 }
 
 .ball-lg {
   width: 54px;
   height: 54px;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .ball-sm {
