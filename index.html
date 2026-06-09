@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PET-Sena Simulator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrap">
+  <h2 class="sr-only">PET-Sena Giveaway Simulator</h2>
+
+  <div class="logo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="118 70 24 24" width="30" height="30">
+      <defs>
+        <clipPath clipPathUnits="userSpaceOnUse" id="cp1">
+          <path d="m 141.733,0 h 1105.51 V 708.661 H 141.733 Z"/>
+        </clipPath>
+      </defs>
+      <g transform="matrix(1.333333,0,0,-1.333333,-404.614166,625.308044)">
+        <g transform="matrix(1,0,0,1,-573.081665,206.884583)">
+          <g clip-path="url(#cp1)">
+            <g transform="translate(973.5386,206.6978)">
+              <path d="M 0,0 C 0,1.525 -1.282,2.806 -2.806,2.806 -4.332,2.806 -5.613,1.525 -5.613,0 v -0.305 h -0.304 c -1.526,0 -2.806,-1.281 -2.806,-2.867 0,-1.525 1.28,-2.806 2.806,-2.806 H 0 Z" style="fill:#ffffff"/>
+            </g>
+            <g transform="translate(973.5386,193.9495)">
+              <path d="m 0,0 c 0,-1.526 -1.282,-2.806 -2.806,-2.806 -1.526,0 -2.807,1.28 -2.807,2.806 v 0.305 h -0.304 c -1.526,0 -2.806,1.281 -2.806,2.806 0,1.525 1.28,2.805 2.806,2.805 H 0 Z" style="fill:rgb(52,199,89)"/>
+            </g>
+            <g transform="translate(974.4537,206.6978)">
+              <path d="M 0,0 C 0,1.525 1.22,2.806 2.805,2.806 4.33,2.806 5.611,1.525 5.611,0 v -0.305 h 0.305 c 1.525,0 2.805,-1.281 2.805,-2.867 0,-1.525 -1.28,-2.806 -2.805,-2.806 H 0 Z" style="fill:rgb(52,199,89)"/>
+            </g>
+            <g transform="translate(974.4537,193.9495)">
+              <path d="m 0,0 c 0,-1.526 1.22,-2.806 2.805,-2.806 1.525,0 2.806,1.28 2.806,2.806 v 0.305 h 0.305 c 1.525,0 2.805,1.281 2.805,2.806 0,1.525 -1.28,2.805 -2.805,2.805 H 0 Z" style="fill:#ffffff"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+    <span class="logo-text">PET-SENA</span>
+  </div>
+
+  <div class="btn-row">
+    <button class="btn btn-gold" id="drawBtn">
+      <i class="fa-solid fa-ticket"></i> Sortear Números
+    </button>
+    <button class="btn btn-light" id="fetchBtn">
+      <i class="fa-solid fa-cloud-arrow-down"></i> Atualizar
+    </button>
+    <button class="btn btn-light" id="demoBtn">
+      <i class="fa-solid fa-users"></i> Demo
+    </button>
+    <button class="btn btn-danger" id="clearBtn">
+      <i class="fa-solid fa-trash"></i> Limpar
+    </button>
+  </div>
+
+  <div class="draw-section">
+    <div class="section-label">Números escolhidos</div>
+    <div class="counter-display" id="drawnBalls">
+      <span class="no-draw" id="top-text">Nenhum número escolhido - Clique em "Sortear Números" para gerar novos.</span>
+    </div>
+  </div>
+
+  <div id="statusBar" class="status-bar"></div>
+
+  <div class="participants-section" id="participantsList">
+    <div class="empty-state">
+      <i class="fa-solid fa-ticket" style="font-size:32px;display:block;margin-bottom:8px;opacity:.4"></i>
+      Nenhum participante ainda. Bora entrar galera!!
+    </div>
+  </div>
+  
+  <div class="pet">
+  <img
+    src="./designs/logo-PET.png"
+    alt="PET Logo"
+    style="width:150px; object-fit:cover; object-position:top; display:block; opacity:0.65;"
+  />
+  PET ESTATÍSTICA UFC
+</div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

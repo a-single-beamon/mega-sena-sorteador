@@ -1,0 +1,264 @@
+@import url('https://fonts.cdnfonts.com/css/futura-std-4');
+
+:root {
+  --bg: #0d3b52;
+  --card: #1a5470;
+  --gold: #c8860e;
+  --light: #d8e8ee;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0a2e42;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+/* ── Accessibility ── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
+
+/* ── App wrapper ── */
+.wrap {
+  background: var(--bg);
+  border-radius: 16px;
+  padding: 20px;
+  width: 100%;
+  max-width: 520px;
+  min-height: 500px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  z-index: 1;
+  margin-bottom: 16px;
+}
+
+.logo-text {
+  font-family: 'Futura Std', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 0.5px;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+/* ── Buttons ── */
+.btn-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 9px 14px;
+  border: none;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
+  transition: opacity 0.15s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: #fff;
+}
+
+.btn-light {
+  background: var(--light);
+  color: var(--bg);
+}
+
+.btn-danger {
+  background: #c0392b;
+  color: #fff;
+}
+
+/* ── Draw section ── */
+.draw-section {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.counter-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.no-draw {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 14px;
+  padding: 8px 0;
+}
+
+/* ── Balls ── */
+.ball {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 700;
+  background: #fff;
+  color: var(--bg);
+  flex-shrink: 0;
+}
+
+.ball-lg {
+  width: 54px;
+  height: 54px;
+  font-size: 18px;
+}
+
+.ball-sm {
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+}
+
+.ball-hit {
+  background: var(--gold) !important;
+  color: #fff !important;
+}
+
+/* ── Status bar ── */
+.status-bar {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 12px;
+}
+
+/* ── Participants ── */
+.participants-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.participant-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.participant-card.winner {
+  border-color: var(--gold);
+}
+
+.p-name {
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  min-width: 90px;
+  flex-shrink: 0;
+}
+
+.p-balls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  flex: 1;
+}
+
+.p-score {
+  margin-left: auto;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+}
+
+.p-score.best {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.winner-badge {
+  background: var(--gold);
+  color: #fff;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 50px;
+  margin-left: 4px;
+}
+
+.pet {
+  z-index: 1;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 11px;
+  letter-spacing: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-top: 24px;
+}
+
+/* ── Empty state ── */
+.empty-state {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 14px;
+  padding: 30px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 560px) {
+  .wrap {
+    border-radius: 0;
+    min-height: 100vh;
+  }
+
+  body {
+    padding: 0;
+    align-items: flex-start;
+  }
+}
